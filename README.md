@@ -6,8 +6,10 @@ Simple program to enable/disable Yubikeys on Linux
 To build and install:
 ---------------------
 
+```
 $ gcc -g -Wall -o yubiswitch main.c
 # install -o root  -g root -m 4755  yubiswitch /usr/local/bin/
+```
 
 (yes, unfortunately it needs to be setuid root)
 
@@ -15,6 +17,7 @@ $ gcc -g -Wall -o yubiswitch main.c
 Usage
 -----
 
+```
 $ yubiswitch
 Usage: yubiswitch {on|off|list|debug}
 
@@ -27,7 +30,7 @@ binding Yubikey to usbhid driver at 1-2:1.0
 
 $ yubiswitch off
 Unbinding Yubikey from usbhid driver at 1-2:1.0
-
+```
 
 Todo
 ----
