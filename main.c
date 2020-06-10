@@ -142,12 +142,12 @@ void callback_on(char *yubikey) {
 	fd = open("/sys/bus/usb/drivers/usbhid/bind", O_WRONLY);
 	if (fd < 0) {
 		perror("opening unbind");
-		exit(1);
+		return;
 	}
 	retval = write(fd, yubikey, strlen(yubikey));
 	if (retval < 0) {
 		perror("writing bind");
-		exit(1);
+		return;
 	}
 	close(fd);
 }
